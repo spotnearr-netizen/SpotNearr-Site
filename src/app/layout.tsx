@@ -8,8 +8,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Spotnearr - Discover Local Shops & Services',
-  description: 'Find nearby cafes, shops, plumbers and more. Follow local businesses and claim exclusive offers.',
-}
+  description: 'Find nearby Shops and Services like cafes, shops, plumbers and more. Get real-time updates and exclusive offers.',
+  metadataBase: new URL('https://www.spotnearr.in'),
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function RootLayout({
   children,
@@ -17,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} transition-colors duration-200`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
