@@ -12,9 +12,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 bg-white dark:bg-white rounded-xl px-2 py-1">
+          <Link href="/" className="flex items-center space-x-0 bg-white dark:bg-white rounded-xl px-1 py-0">
             {/* Replace with your icon file: import Icon from '@/public/icon.png' */}
-            <div className="w-10 h-10 flex items-center rounded-xl bg-white dark:bg-white p-1">
+            <div className="w-10 h-10 flex items-center rounded-xl bg-white dark:bg-white p-0">
               <Image 
                 src="/logoSpotnearr.png" 
                 alt="SpotNearr Logo" 
