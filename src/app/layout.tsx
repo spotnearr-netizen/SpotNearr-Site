@@ -1,32 +1,28 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ConvexClientProvider } from "@/lib/convex";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: 'Spotnearr - Discover Local Shops & Services',
-  description: 'Find nearby Shops and Services like cafes, shops, plumbers and more. Get real-time updates and exclusive offers.',
-  metadataBase: new URL('https://www.spotnearr.in'),
-  alternates: {
-    canonical: '/',
-  },
+  title: "Spotnearr",
+  description: "Your neighborhood social utility. Find local deals, services, and community updates.",
 };
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} transition-colors duration-200`}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en">
+      <body className={`${inter.variable} antialiased`}>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
-  )
+  );
 }
