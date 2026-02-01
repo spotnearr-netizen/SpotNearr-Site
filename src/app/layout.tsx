@@ -11,6 +11,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Spotnearr",
   description: "Your neighborhood social utility. Find local deals, services, and community updates.",
+
+  other: {
+    "google-site-verification": "jij334hejOdT8odDBmxd8TUVds7B5Z5KKHxTlQ8G8mM",
+  },
 };
 
 export default function RootLayout({
